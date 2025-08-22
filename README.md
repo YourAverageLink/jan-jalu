@@ -1,0 +1,1 @@
+Basic static site made with HTML and TailwindCSS to showcase my personal projects.
