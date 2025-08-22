@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mi jan Jalu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@latest/dist/typography.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .prose-invert,
+      .prose-invert h1,
+      .prose-invert h2,
+      .prose-invert h3,
+      .prose-invert h4,
+      .prose-invert h5,
+      .prose-invert h6,
+      .prose-invert p,
+      .prose-invert ul,
+      .prose-invert li,
+      .prose-invert a,
+      .prose-invert blockquote {
+        z-index: 2;
+        color: #ece8f0;
+      }
+      .prose-invert a {
+        text-decoration: underline;
+        color: #dcf;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gradient-to-b from-gray-800 to-[#101]"
+    style="font-family: 'Noto Serif', serif"
+  >
+    <a id="top"></a>
+    <header
+      class="bg-gradient-to-tr from-[#543680] to-[#140818] shadow text-gray-100 mb-10 sticky top-0 z-10"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold hover:text-blue-200"><a href="#top">lipu pi jan Jalu</a></h1>
+        <nav class="space-x-4 text-lg">
+          <a href="#about" class="hover:text-blue-200">About</a>
+          <a href="#projects" class="hover:text-blue-200">Projects</a>
+          <a
+            href="https://github.com/YourAverageLink"
+            class="hover:text-blue-500"
+            >GitHub</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <div class="prose mx-auto max-w-6xl px-10 lg:prose-lg prose-invert">
+      <h1 id="about" class="text-center">toki! mi jan Jalu</h1>
+      <p>
+        Hi there! You can call me
+        <a href="https://sona.pona.la/wiki/Names">jan Jalu</a> (/jan jalu/), jan
+        Sante, YAL, or Xander. I'm a computer science and game development
+        student at USC, and an aspiring
+        <a href="https://www.rust-lang.org/">Rustacean</a>. Outside of my
+        studies, I'm also into recreational mathematics, linguistics (big
+        surprise for someone using
+        <a href="https://en.wikipedia.org/wiki/Toki_Pona">toki pona</a> names
+        and Noto Serif, I know), music theory, and speedrunning Legend of Zelda
+        games.
+      </p>
+      <h1 id="projects" class="text-center">pali mi (projects)</h1>
+      <p>
+        Here are some personal projects and open-source contributions I've made
+        through the years. Many of them relate to <i>Skyward Sword</i>, my
+        favorite game in the <i>Legend of Zelda</i> series.
+      </p>
+      <h2 id="ssgz" class="text-center">
+        <strong
+          ><a href="https://github.com/YourAverageLink/ssgz"
+            >ssgz (Skyward Sword practice ROM)</a
+          ></strong
+        >
+      </h2>
+      <p>
+        ssgz is my most recent Skyward Sword-related project. Inspired by
+        <a href="https://github.com/zsrtww/tww-gz">twwgz</a> and
+        <a href="https://github.com/zsrtp/tpgz">tpgz</a>, it is a practice ROM
+        hack for speedrunners and researchers. Users can open a custom menu
+        in-game to access practice tools. Key features include...
+      </p>
+      <ul>
+        <li>
+          Useful cheats (such as infinite
+          <span style="color: #ffabab">health</span>, infinite
+          <span style="color: #22aa22">stamina</span>, infinite ammo, and moon
+          jump)
+        </li>
+        <li>
+          The ability to save & load position and entrance information to
+          quickly reload an area
+        </li>
+        <li>
+          A practice saves menu (allowing users to quickly practice a specific
+          part of a speedrun route without having to load saves externally)
+        </li>
+        <li>
+          A menu containing certain tricks and boss fights from various speedrun
+          categories, that, when enabled, will load the user into the scenario
+          the trick takes place in, reloading if the trick is performed
+          successfully or when the user requests a reload.
+        </li>
+      </ul>
+      <p>
+        Working on gz has helped me greatly with learning Rust. Similar to the
+        <a href="#rando">randomizer</a>, much of the game's patches are written
+        in Rust (compiled to PowerPC assembly with build scripts) or raw
+        assembly. I decided to write the patcher (the command-line or GUI
+        utility that patches the game) in Rust, partially for learning purposes,
+        and partially to speed up the process of extracting, patching, and
+        repacking the game.
+      </p>
+      <h3 class="text-center">Gallery (scroll to see more)</h3>
+      <div class="overflow-x-auto snap-x snap-mandatory">
+        <div class="flex">
+          <div class="w-full flex-shrink-0 snap-center">
+            <img
+              src="images/gzui.png"
+              alt="Patcher GUI"
+              class="max-h-72 object-contain mx-auto rounded-xl"
+            />
+            <p class="text-center">GUI for the patcher program</p>
+          </div>
+          <div class="w-full flex-shrink-0 snap-center">
+            <img
+              src="images/gz-menu.png"
+              alt="In-game menu"
+              class="max-h-72 object-contain mx-auto rounded-xl"
+            />
+            <p class="text-center">The in-game menu</p>
+          </div>
+          <div class="w-full flex-shrink-0 snap-center">
+            <video class="max-h-72 object-contain mx-auto rounded-xl" controls>
+              <source src="videos/gz-practice-save.mp4" type="video/mp4" />
+            </video>
+            <p class="text-center">Loading a practice save</p>
+          </div>
+          <div class="w-full flex-shrink-0 snap-center">
+            <video class="max-h-72 object-contain mx-auto rounded-xl" controls>
+              <source src="videos/gz-wccs-checker.mp4" type="video/mp4" />
+            </video>
+            <p class="text-center">
+              Example trick: Wing Ceremony Cutscene Skip checker
+            </p>
+          </div>
+        </div>
+      </div>
+      <h2
+        class="text-center"
+        id="-skyward-sword-randomizer-https-github-com-ssrando-ssrando-"
+      >
+        <a href="https://github.com/ssrando/ssrando"
+          >Skyward Sword Randomizer</a
+        >
+      </h2>
+      <p>
+        The randomizer for <i>Skyward Sword</i> first released in October of
+        2020. I got introduced to it in the following January and was promptly
+        hooked. At the time, I was still in high school, and I had taken an
+        interest in programming. Come September, I decided to try my hand at
+        open-source contribution for the first time and submitted my first pull
+        request for a small feature addition. With the guidance of other
+        developers, I got more comfortable with the codebase and working on more
+        complex features. Among my favorite tasks were...
+      </p>
+      <ul>
+        <li>
+          Adding
+          <a href="https://github.com/ssrando/ssrando/pull/214">Triforces</a> as
+          shuffleable items
+        </li>
+        <li>
+          Adding the ability to
+          <a href="https://github.com/ssrando/ssrando/pull/257">dowse</a> for
+          useful items in treasure chests
+          <ul>
+            <li>
+              This was my first foray into assembly patching, as some low-level
+              game patches were necessary to get chests to act as dowsing
+              targets
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://github.com/ssrando/ssrando/pull/597"
+            >Hint Importance</a
+          >: specifying if useful items that appear in hints are
+          <span style="color: #2a2">required</span> (the seed cannot be
+          completed without it),
+          <span style="color: #aaa">not required</span> (the item doesn't unlock
+          any locations with useful items), or
+          <span style="color: #dc8">possibly required</span> (the location
+          leads to useful items, but the seed can still be completed without
+          it).
+          <ul>
+            <li>
+              This was an interesting problem to solve, and leveraging a logic
+              flattening algorithm (thanks to robojumper, maintainer of the SS
+              Randomizer Tracker) made hint importance calculations faster
+              <i>and</i> more accurate
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3 class="text-center">Gallery (scroll to see more)</h3>
+      <div class="overflow-x-auto snap-x snap-mandatory">
+        <div class="flex">
+          <div class="w-full flex-shrink-0 snap-center">
+            <img
+              src="images/dowsing.png"
+              alt="Chest Dowsing"
+              class="max-h-72 object-contain mx-auto rounded-xl"
+            />
+            <p class="text-center">Pinging a chest...</p>
+          </div>
+          <div class="w-full flex-shrink-0 snap-center">
+            <img
+              src="images/triforce.png"
+              alt="Triforce"
+              class="max-h-72 object-contain mx-auto rounded-xl"
+            />
+            <p class="text-center">...to get a Triforce!</p>
+          </div>
+          <div class="w-full flex-shrink-0 snap-center">
+            <img
+              src="images/hint-importance.png"
+              alt="Hint Importance"
+              class="max-h-72 object-contain mx-auto rounded-xl"
+            />
+            <p class="text-center">Examples of hint importance</p>
+          </div>
+        </div>
+      </div>
+      <p id="#tracker">
+        I've also gotten to contribute to the aforementioned
+        <a href="https://robojumper.github.io/SS-Randomizer-Tracker/"
+          >web tracker</a
+        >, a tool for tracking game progress while playing the randomizer. In
+        particular, I added a new UI for location tracking based on the game's
+        world map:
+      </p>
+      <div class="w-full flex-shrink-0 snap-center">
+        <img
+          src="images/map-tracker.png"
+          alt="Map Tracker"
+          class="max-h-96 object-contain mx-auto rounded-xl"
+        />
+        <p class="text-center">The map-based location tracking UI</p>
+      </div>
+      <h3 class="text-center" id="archipelago">
+        <a href="https://github.com/Battlecats59/SSArchipelago/tree/ss"
+          >Archipelago (Multiworld) Support</a
+        >
+      </h3>
+      <p>
+        In early 2025, fellow randomizer contributor Battlecats59 started work
+        on an implementation of Skyward Sword Randomizer for
+        <a href="https://archipelago.gg/">Archipelago</a>, a platform for
+        cross-game randomizers. I offered to help shortly after, and have been
+        working with him towards getting the game officially merged in.
+        Recently, thanks to some earlier Wii networking experiments by lead
+        randomizer developer lepelog, I added console support to SSR
+        Archipelago. The modified game code opens a UDP server on the Wii,
+        allowing the player to connect their console to their multiworld client.
+        This is the first Wii game to have support for multiworld randomization
+        on official hardware!
+      </p>
+      <h3 class="text-center">Gallery (scroll to see more)</h3>
+      <div class="overflow-x-auto snap-x snap-mandatory">
+        <div class="flex">
+          <div class="w-full flex-shrink-0 snap-center">
+            <video class="max-h-72 object-contain mx-auto rounded-xl" controls>
+              <source
+                src="videos/console-proof-of-concept.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p class="text-center">Original console proof of concept video</p>
+          </div>
+          <div class="w-full flex-shrink-0 snap-center">
+            <img
+              src="images/ap-console-complete.png"
+              alt="AP seed completed on console"
+              class="max-h-72 object-contain mx-auto rounded-xl"
+            />
+            <p class="text-center">The very first AP seed completed on Wii!</p>
+          </div>
+        </div>
+      </div>
+      <p>
+        I also worked on a
+        <a href="https://youraveragelink.github.io/SS-Randomizer-Tracker/"
+          >fork of the web tracker</a
+        >
+        that automatically tracks locations and items by connecting to the
+        multiworld server.
+      </p>
+      <div class="w-full flex-shrink-0 snap-center">
+        <img
+          src="images/ap-tracker.png"
+          alt="Archipelago Tracker"
+          class="max-h-96 object-contain mx-auto rounded-xl"
+        />
+        <p class="text-center">
+          Screenshot of an Archipelago tracker open with the text client
+        </p>
+      </div>
+      <h2 class="text-center" id="other">pali ante (other work)</h2>
+      <p>Some other projects I've worked on are...</p>
+      <ul>
+        <li>
+          <a href="https://github.com/mint-choc-chip-skyblade/sshd-rando"
+            >Skyward Sword HD Randomizer</a
+          >
+          - I joined the development team later on and added a few
+          contributions, mainly working on the included tracker and support for
+          MacOS.
+        </li>
+        <li>
+          A
+          <a href="https://youraveragelink.github.io/racetime-data/"
+            >tool for visualizing head-to-head matchups</a
+          >
+          on <a href="https://racetime.gg/">racetime.gg</a>, a service for
+          racing video game speedruns/randomizers. Admittedly, I should go back
+          and optimize the code there, and there are more features I'd like to
+          add.
+        </li>
+        <li>
+          I&#39;m currently working on a Rust crate for handling tournament
+          brackets. I will update this entry once I've pushed my code.
+        </li>
+      </ul>
+    </div>
+    <footer class="bg-[#180828] shadow mt-16">
+      <div class="max-w-6xl mx-auto px-4 py-6 text-center text-gray-200">
+        © 2025 YourAverageLink. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
